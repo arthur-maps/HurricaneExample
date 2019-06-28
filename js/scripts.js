@@ -44,6 +44,7 @@ map.setView([28.0, -82.8], 6.5);
       } else if(feature.properties.RADII === 34){
       return { fillOpacity:0.2 };
    }
+    }
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
