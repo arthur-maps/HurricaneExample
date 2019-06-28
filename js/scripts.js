@@ -65,6 +65,10 @@ function getColor(d) {
         };
     }
 
+L.esri.tiledMapLayer({
+   url: 'https://tiles.arcgis.com/tiles/cDCsY3VB02CTTRKx/arcgis/rest/services/Hurricane_Florence_Inundation_Layer_img/MapServer'
+}).addTo(map);
+
 var legend = L.control({position: 'bottomleft'});
     legend.onAdd = function (map) {
 
