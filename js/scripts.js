@@ -80,8 +80,8 @@ var legend = L.control({position: 'bottomleft'});
     legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-    labels = ['<strong>Land Use Strata</strong>'],
-    categories = ['High Cultivation','Medium Cultivation','High Cultivation: Citrus','Medium Cultivation: Citrus','Sugar Cane'];
+    labels = ['<strong>Land Cover</strong>'],
+    categories = ['Cropland','Inundated Cropland','Water'];
 
     for (var i = 0; i < categories.length; i++) {
 
