@@ -35,7 +35,15 @@ map.setView([28.0, -82.8], 6.5);
 
  //a Leaflet marker is used by default to symbolize point features.
  var strata = L.esri.featureLayer({
-    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/AL062018_windswath_albers_smooth/FeatureServer/0'
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/AL062018_windswath_albers_smooth/FeatureServer/0',
+    style: function (feature) {
+      if(feature.properties.RADII === 64){
+      return { fillOpacity:0.2 };
+      } else if(feature.properties.RADII === 50){
+      return { fillOpacity:0.2 };
+      } else if(feature.properties.RADII === 34){
+      return { fillOpacity:0.2 };
+   }
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
