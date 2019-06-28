@@ -48,17 +48,15 @@ map.setView([28.0, -82.8], 6.5);
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
-    return L.Util.template('<p>{Stratum}<br>{Definition}</p>', layer.feature.properties);
+    return L.Util.template('<p>Minimum Wind Speed: {RADII} knots</p>', layer.feature.properties);
   });
 
 //var legend = L.control({position: 'bottomright'});
 
 function getColor(d) {
-        return d === 'High Cultivation'  ? "#38A800" :
-               d === 'Medium Cultivation'  ? "#98E600" :
-               d === 'High Cultivation: Citrus' ? "#FFAA00" :
-               d === 'Medium Cultivation: Citrus' ? "#FFD37F" :
-               d === 'Sugar Cane' ? "#00C5FF" :
+        return d === 'Cropland'  ? "#006400" :
+               d === 'Inundated Cropland'  ? "#FF0000" :
+               d === 'Water' ? "#0000FF" :
                             "#ff7f00";
     }
 
