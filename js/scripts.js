@@ -11,7 +11,7 @@ var map = L.map('mapid', {
 
 //var map = L.map('mapid').setView([28.5, -81.6], 7);
 
-var southWest = L.latLng(21.21, -92.20),
+var southWest = L.latLng(34.69, -78.60),
                 northEast = L.latLng(34.15, -74.18),
                 mybounds = L.latLngBounds(southWest, northEast);
 
