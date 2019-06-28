@@ -35,36 +35,7 @@ map.setView([28.0, -82.8], 6.5);
 
  //a Leaflet marker is used by default to symbolize point features.
  var strata = L.esri.featureLayer({
-    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/FL_strata_definitions/FeatureServer/0',
-     simplifyFactor: 0.35,
-   precision: 5,
-     style: function (feature) {
-      if(feature.properties.Strata === 17){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 18){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 13){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 21){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 22){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 27){
-      return { fillOpacity:0.7 };
-      } else if(feature.properties.Strata === 31){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 32){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 40){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 42){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 50){
-      return { fillOpacity: 0 };
-      } else if(feature.properties.Strata === 62){
-      return { fillOpacity: 0 };
-      } 
-   }
+    url: 'https://services5.arcgis.com/cDCsY3VB02CTTRKx/arcgis/rest/services/AL062018_windswath_albers_smooth/FeatureServer/0'
   }).addTo(map);
 
  strata.bindPopup(function (layer) {
